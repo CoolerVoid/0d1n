@@ -5,7 +5,7 @@ CC=gcc
 CFLAGS=-W -Wall -Wextra -fstack-protector-all
 UNAME_S := $(shell uname -s)
 ifeq ($(UNAME_S),Darwin)
-	LDFLAGS=-Wl,-lcurl
+	LDFLAGS=-Wl,-dead_strip,-bind_at_load, -lcurl
 else
 	LDFLAGS=-Wl,-z,relro,-z,now -lcurl
 endif
