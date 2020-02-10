@@ -152,7 +152,7 @@ static struct option long_options[] =
 int 
 main(int argc, char ** argv)
 {
- char c;
+ int c;
  char *pack[24]; 
  short y=23;
 
